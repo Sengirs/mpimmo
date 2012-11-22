@@ -28,7 +28,7 @@
 #
 
 class Client < ActiveRecord::Base
-  attr_accessible :surname1 :surname2 :name1 :name2 :adress :zip :city :ph1 :ph2 port1 :port2 :mail1 :mail2 :date :canal :origin :note
+  attr_accessible :surname1, :surname2, :name1, :name2, :adress, :zip, :city, :ph1, :ph2, :port1, :port2, :mail1, :mail2, :date, :canal, :origin, :note
   
   ###RELATIONSHIPS##########
   has_many :sells, :dependent => :destroy
@@ -40,9 +40,10 @@ class Client < ActiveRecord::Base
   
   
   ###ATTRIBUTES VALIDATION##########
+  email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :surname1, :presence => true
-  validates :mail1, :uniqueness => {case_sensitive => false}, :format => { :with => email_regex }
-  validates :mail2, :uniqueness => {case_sensitive => false}, :format => { :with => email_regex }
+  validates :mail1, :uniqueness => {:case_sensitive => false}, :format => { :with => email_regex }
+  validates :mail2, :uniqueness => {:case_sensitive => false}, :format => { :with => email_regex }
   ############################################
   
 end

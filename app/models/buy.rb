@@ -25,7 +25,7 @@
 #
 
 class Buy < ActiveRecord::Base
-  attr_accessible :client_id :cat :budget :bdr :tipe :surface :sector1 :sector2 :sector3 :sector4 :ground :age :travaux :plain :garage :standing :note
+  attr_accessible :client_id, :cat, :budget, :bdr, :tipe, :surface, :sector1, :sector2, :sector3, :sector4, :ground, :age, :travaux, :plain, :garage, :standing, :note
 
   ###RELATIONSHIPS##########
   belongs_to :client

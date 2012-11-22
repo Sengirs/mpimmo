@@ -23,7 +23,7 @@
 #
 
 class Step < ActiveRecord::Base
-  attr_accessible :buy_id :product_id :status :date :origin :contact1 :contact1_note :contact2 :contact2_note :contact3 :contact3_note :contact4 :contact4_note :note :fail_note
+  attr_accessible :buy_id, :product_id, :status, :date, :origin, :contact1, :contact1_note, :contact2, :contact2_note, :contact3, :contact3_note, :contact4, :contact4_note, :note, :fail_note
   
 
   ###RELATIONSHIPS##########

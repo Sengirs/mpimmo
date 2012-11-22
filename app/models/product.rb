@@ -3,7 +3,7 @@
 # Table name: products
 #
 #  id           :integer          not null, primary key
-#  class        :string(255)
+#  attr         :string(255)
 #  num_mandat   :integer
 #  status       :boolean
 #  date1        :date
@@ -37,14 +37,14 @@
 #
 
 class Product < ActiveRecord::Base
-  attr_accessible :class :num_mandat :status :date1 :date2 :adress :zip :city :cat :price1 :price2 :price3 :price4 :etat :year :tipe :bdr :surface :ground :story :sector1 :sector2 :sector3 :sector4 :pool :travaux :travaux_note :note :vitrine
+  attr_accessible :attr, :num_mandat, :status, :date1, :date2, :adress, :zip, :city, :cat, :price1, :price2, :price3, :price4, :etat, :year, :tipe, :bdr, :surface, :ground, :story, :sector1, :sector2, :sector3, :sector4, :pool, :travaux, :travaux_note, :note, :vitrine
   
   ###RELATIONSHIPS##########
   has_many :steps
   ############################################
   
   ###ATTRIBUTES VALIDATION##########
-  validates :class, :presence => true
+  validates :attr, :presence => true
   validates :num_mandat, :presence => true
   validates :status, :presence => true
   ############################################

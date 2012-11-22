@@ -13,7 +13,7 @@
 #
 
 class Sell < ActiveRecord::Base
-  attr_accessible :client_id, :product_id :date :origin :mandat
+  attr_accessible :client_id, :product_id, :date, :origin, :mandat
   
   ###RELATIONSHIPS##########
   belongs_to :client
