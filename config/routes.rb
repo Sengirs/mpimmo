@@ -1,4 +1,14 @@
 Mpimmo::Application.routes.draw do
+  get "products/new"
+
+  get "sells/new"
+
+  get "steps/new"
+
+  get "buys/new"
+
+  get "clients/new"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
